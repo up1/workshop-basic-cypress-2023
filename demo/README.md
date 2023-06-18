@@ -29,3 +29,16 @@ $npm run cypress:test
 
 ## System for testing
 * https://demo-login-workshop.vercel.app/
+    * Login success case
+      * user=demo
+      * password=mode
+    * Login failure case(s)
+    * Test Life cycle (Hooks)
+    * Data driven testing
+      * Use fixtures
+
+## Data driven testing
+
+Create fixtures in folder `/fixtures`
+
+

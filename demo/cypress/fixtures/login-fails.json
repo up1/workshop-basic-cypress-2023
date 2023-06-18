@@ -1,0 +1,12 @@
+[
+    {
+        "test_case": "Fail with wrong username",
+        "usename": "demo2",
+        "password": "mode"
+    },
+    {
+        "test_case": "Fail with wrong password",
+        "usename": "demo",
+        "password": "mode2"
+    }
+]
