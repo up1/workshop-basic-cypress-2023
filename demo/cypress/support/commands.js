@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+// cypress/support/commands.ts
+Cypress.Commands.add('login', (username, password) => { 
+    cy.get('#username_field').should('be.visible').type(username)
+    cy.get('#password_field').should('be.visible').type(password)
+    cy.get('#login_button').should('be.visible').click()
+})
+
+Cypress.Commands.add('getBySel', (selector, ...args) => {
+    return cy.get(`[data-test=${selector}]`, ...args)
+})
