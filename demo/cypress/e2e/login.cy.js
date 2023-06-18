@@ -1,5 +1,6 @@
 describe('template spec', () => {
-  it('passes', () => {
+  it('passes', { tags: ['login'] }, () => {
+
     // Arrange
     cy.visit('https://demo-login-workshop.vercel.app')
     
