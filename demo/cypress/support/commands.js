@@ -27,9 +27,9 @@
 
 // cypress/support/commands.ts
 Cypress.Commands.add('login', (username, password) => { 
-    cy.get('#username_field').should('be.visible').type(username)
-    cy.get('#password_field').should('be.visible').type(password)
-    cy.get('#login_button').should('be.visible').click()
+    cy.getBySel('username_field').should('be.visible').type(username)
+    cy.getBySel('password_field').should('be.visible').type(password)
+    cy.getBySel('login_button').should('be.visible').click()
 })
 
 Cypress.Commands.add('getBySel', (selector, ...args) => {
