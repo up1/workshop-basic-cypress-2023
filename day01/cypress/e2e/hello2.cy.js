@@ -18,7 +18,7 @@ describe('Search with google.com', () => {
     cy.wait(['@search', '@client_204'])
   })
 
-  it('Success with load first page', () => { 
+  it('Success with load first page', {tags: ['group01']}, () => { 
     cy.get('#APjFqb').should('be.visible')
     cy.get('[name="q"]').should('be.visible')
   })
