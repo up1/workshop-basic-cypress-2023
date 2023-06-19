@@ -1,3 +1,14 @@
-{
-    "keyword": "cypress todo ..."
-}
+[
+    {
+        "case_name": "Case 01",
+        "keyword": "cypress todo 01"
+    },
+    {
+        "case_name": "Case 02",
+        "keyword": "cypress todo 02"
+    },
+    {
+        "case_name": "Case 03",
+        "keyword": "cypress todo 03"
+    }
+]
