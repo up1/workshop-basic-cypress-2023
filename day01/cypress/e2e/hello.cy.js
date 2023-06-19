@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Search with google.com', () => {
 
   it('Success with load first page', () => {
     cy.visit('/')
