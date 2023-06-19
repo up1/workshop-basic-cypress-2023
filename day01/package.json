@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "cypress:run:chrome": "cypress run --browser chrome --headed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@bahmutov/cy-grep": "^1.9.16",
     "cypress": "^12.14.0"
   }
 }
