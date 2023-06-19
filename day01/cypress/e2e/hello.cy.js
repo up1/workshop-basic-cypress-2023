@@ -10,7 +10,8 @@ describe('Search with google.com', () => {
 
   it('Success with search by keyword=cypress', () => {
     // Act
-    cy.get('[name="q"]').type('cypress')
+    // cy.get('[name="q"]').type('cypress') // Hard code
+    cy.get('[name="q"]').type(Cypress.env('keyword')) // Read from env
     cy.get('[name="q"]').type('{enter}')
     // Assert
     cy.get('#result-stats').should('be.visible')
