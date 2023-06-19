@@ -5,7 +5,9 @@ describe('Search with google.com', () => {
         method: 'GET',
         url: '/complete/search*',
       },
-      []
+      [
+        {}
+      ]
     ).as('search')
     cy.intercept(
       {
