@@ -19,3 +19,4 @@
   * [Fixture](https://docs.cypress.io/api/commands/fixture)
   * [Use environment variables](https://docs.cypress.io/guides/guides/environment-variables)
   * [Cypress best practice](https://docs.cypress.io/guides/references/best-practices)
+  * Grouping test case with [cy-grep](https://github.com/bahmutov/cy-grep)
