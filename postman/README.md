@@ -7,11 +7,11 @@ $npm i -g newman
 
 Run collection
 ```
-$newman run collection_gile.json
-$newman run collection_gile.json -r cli,junit,html
+$newman run collection_file.json
+$newman run collection_file.json -r cli,junit,html
 ```
 
 Run collection + environment
 ```
-$$newman run -e env.json collection_gile.json 
+$newman run -e env.json collection_file.json 
 ```
