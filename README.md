@@ -4,3 +4,6 @@
 
 ## API testing
 * [Demo API](https://jsonplaceholder.typicode.com/)
+
+## Manage data for testing
+* [NodeJS + MySQL](https://github.com/up1/workshop-nodejs-web)
