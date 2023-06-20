@@ -8,6 +8,53 @@
 	},
 	"item": [
 		{
+			"name": "Get all users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Checlk size of data\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(10).to.eql(jsonData.length);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(1).to.eql(jsonData[0].id);",
+							"",
+							"    pm.collectionVariables.set(\"USER_ID\", jsonData[0].id);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get user by id = 1",
 			"event": [
 				{
@@ -135,7 +182,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/users/1",
+					"raw": "https://jsonplaceholder.typicode.com/users/{{USER_ID}}",
 					"protocol": "https",
 					"host": [
 						"jsonplaceholder",
@@ -144,50 +191,17 @@
 					],
 					"path": [
 						"users",
-						"1"
+						"{{USER_ID}}"
 					]
 				}
 			},
 			"response": []
-		},
+		}
+	],
+	"variable": [
 		{
-			"name": "Get all users",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Checlk size of data\", function () {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(10).to.eql(jsonData.length);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/users/",
-					"protocol": "https",
-					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
-					],
-					"path": [
-						"users",
-						""
-					]
-				}
-			},
-			"response": []
+			"key": "USER_ID",
+			"value": ""
 		}
 	]
 }
